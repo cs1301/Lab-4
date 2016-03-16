@@ -1,3 +1,5 @@
+// collaboration statement
+
 kiwi_caught = 0;
 
 function process_frame() {
