@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+	<head>
+		<title>Lab 4 - CS 1301</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id = "content">
+			<br>
+			<br>
+			<div class = "lab">
+				Lab 4
+				<div class = "subscript">
+					CS 1301 - Due Weekday Month 99th, 2016
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class = "heading">
+				Javascript Lesson:
+			</div>
+			<table>
+				<tr>
+					<td>
+						Okay... You're getting pretty comfortable with Python at this point, but it turns out you're learning a lot more than just Python. Many languages share similar concepts that make switching between them easier than you would expect! In this lab, we're going to use Javascript which is similar to Python in many ways. The syntax is a little bit different, but it's not hard to get the hang of. Examine these two pieces of code:
+					</td>
+				</tr>
+			</table>
+			<table class = "code">
+				<tr>
+					<td>
+						<span class = "code-comment">#python:</span><br>
+						<span class = "code-keyword">def</span> someFunc(<span class = "code-param">aNum</span>):<br>
+						<span class = "tab"></span><span class = "code-statement">return</span> aNum + 5
+					</td>
+					<td>
+						<span class = "code-comment">// Javascript:</span><br>
+						<span class = "code-keyword">function</span> someFunc(<span class = "code-param">aNum</span>) {<br>
+						<span class = "tab"></span><span class = "code-statement">return</span> aNum + 5;<br>
+						}
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>
+						Even if you've never seen Javascript before in your life, you probably won't have much trouble determining what's going on there. One interesting thing about Javascript is that it really doesn't care much about indentation or newlines like Python does. Instead, it uses semicolons to keep track of the end of lines and curly brackets to keep track of blocks of code. That said, there are conventions that most developers follow when working with Javascript, and we'll try to follow them as well in this project. Now look at this example:
+					</td>
+				</tr>
+			</table>
+			<table class = "code">
+				<tr>
+					<td>
+						<span class = "code-comment">#python:</span><br>
+						<span class = "code-keyword">def</span> someOtherFunc(<span class = "code-param">aNum</span>):<br>
+						<span class = "tab"></span><span class = "code-statement">if</span> aNum > 5:<br>
+						<span class = "tab"></span><span class = "tab"></span><span class = "code-keyword">print</span>(<span class = "code-string">"Greater than 5!"</span>)<br>
+						<span class = "tab"></span><span class = "code-statement">elif</span> aNum == 5:<br>
+						<span class = "tab"></span><span class = "tab"></span><span class = "code-keyword">print</span>(<span class = "code-string">"Equal to 5!"</span>)<br>
+						<span class = "tab"></span><span class = "code-statement">else</span>:<br>
+						<span class = "tab"></span><span class = "tab"></span><span class = "code-keyword">print</span>(<span class = "code-string">"Less than 5!"</span>)<br>
+					</td>
+					<td>
+						<span class = "code-comment">// Javascript:</span><br>
+						<span class = "code-keyword">function</span> someOtherFunc(<span class = "code-param">aNum</span>) {<br>
+						<span class = "tab"></span><span class = "code-statement">if</span> (aNum > 5) {<br>
+						<span class = "tab"></span><span class = "tab"></span>console.<span class = "code-keyword">log</span>(<span class = "code-string">"Greater than 5!"</span>);<br>
+						<span class = "tab"></span>} <span class = "code-statement">else if</span> (aNum == 5) {<br>
+						<span class = "tab"></span><span class = "tab"></span>console.<span class = "code-keyword">log</span>(<span class = "code-string">"Equal to 5!"</span>);<br>
+						<span class = "tab"></span>} <span class = "code-statement">else</span> {<br>
+						<span class = "tab"></span><span class = "tab"></span>console.<span class = "code-keyword">log</span>(<span class = "code-string">"Less than 5!"</span>);<br>
+						<span class = "tab"></span>}<br>
+						}
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>
+						Again, even though the syntax may be totally foreign, the general flow of execution is pretty easy to follow. One important point to note is that the parentheses around the conditions in the Javascript example are necessary while they would be optional in Python. This is really all the syntax understanding that you will need for this lab, but here is an excellent resource if you want to learn more about Javascript: <br>
+						<ul>
+							<li><a href = "http://www.w3schools.com/js/">W3 Schools</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<div class = "heading">
+				Instructions:
+			</div>
+			<table>
+				<tr>
+					<td>
+						Now it's time to try writing some Javascript! First you will need to add a few files to your prism server. Download these and save them to a new folder on your prism drive under public_html called "lab4":<br>
+						<ul>
+							<li><a href = "./given/student_code.js">student_code.js</a></li>
+							<li><a href = "./given/music.mp3">music.mp3</a></li>
+							<li><a href = "./given/index.html">index.html</a> (do not edit)</li>
+						</ul>
+						As always, it's important that you save these to the right place so that we can grade your lab. Now when you go to the folder in your browser, you should see a half finished game. Go ahead and try it out:<br>
+						<br>
+						http://www.prism.gatech.edu/~yourusername/lab4/<br>
+						<br>
+						Your job is to finish the game! We've provided some empty functions for you to fill in as well as some more functions for you to use as you need them. When you finish, the video game should be playable, like in the following example video: 
+						<br>
+						<br>
+						<iframe style = "display: block; margin-left: auto; margin-right: auto; width: 100%; height: 550px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); border-radius: 5px;" src="https://www.youtube-nocookie.com/embed/vY0ifwfLBt4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+						<br>
+						<br>
+						Here are the expectations for each function:<br>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>
+						<span class = "code">process_frame()</span>
+					</td>
+					<td>
+						This function is called by the game every single time the screen refreshes (60 times a second at best). It should do a few things:<br>
+						<ul>
+							<li>if the user is pressing the "b" key, it should call <span class = "code">brake_truck()</span></li>
+							<li>if the user is pressing the left arrow, it should call <span class = "code">translate_truck_left()</span></li>
+							<li>if the user is pressing the right arrow, it should call <span class = "code">translate_truck_right()</span></li>
+							<li>if the user is not pressing any of those keys, it should call <span class = "code">coast_truck()</span></li>
+							<li>the function should call <span class = "code">compute_truck_position()</span> every time regardless of what key is pressed</li>
+							<li>the function should randomly decide whether to make a new kiwi start falling using the user's setting for the probability</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">translate_truck_right()</span>
+					</td>
+					<td>
+						This function should increase the truck's velocity by some constant. There should be a maximum velocity to keep the truck from accelerating infinitely. These exact values are up to you.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">translate_truck_left()</span>
+					</td>
+					<td>
+						This function should decrease the truck's velocity by some constant. There should be a minimum velocity which is less than zero to allow the car to travel left. 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">coast_truck()</span>
+					</td>
+					<td>
+						This function should make the truck's velocity approach zero. 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">brake_truck()</span>
+					</td>
+					<td>
+						This function should make the truck's velocity approach zero much more quickly than <span class = "code">coast_truck</span>.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">compute_truck_position()</span>
+					</td>
+					<td>
+						This function should do two things:<br>
+						<ul>
+							<li>
+								change the position of the truck using its velocity as the offset. 
+							</li>
+							<li>
+								bounds check: if the truck is going off the side of the screen, immediately change its velocity to a lesser value in the opposite direction to cause it to bounce back. 
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">find_collisions(<span class = "code-param">kiwi</span>)</span>
+					</td>
+					<td>
+						This one is tricky. It will be called by the game for every kiwi for every frame (60 times per second) and its job is to determine whether a particular kiwi is colliding with the truck. In the case that there is a collision, it should delete the kiwi, increment the <span class = "code">kiwi_caught</span> counter, and then update the HTML element with the new value. In general, you can change what's on a webpage by selecting the element by it's ID and changing its inner HTML like so:<br>
+						<br>
+						<span class = "code"><span class = "code-keyword">document</span>.<span class = "code-keyword">getElementById</span>(<span class = "code-string">"element-id"</span>).innerHTML = some_var;</span><br>
+						<br>
+						The ID of the element you want to change is "kiwi-count" and the value you want to change it to is stored in the <span class = "code">kiwi_caught</span> variable. It is up to you to decide what qualifies as a collision (do the kiwi's need to land in the truck bed or do they just need to touch the truck to count as a point?), <b>but you need to leave a comment explaining your decision and the math that you used to implement it.</b> Remember, a comment uses two slashes in Javascript:<br>
+						<br>
+						<span class = "code"><span class = "code-comment">// like this.</span></span><br>
+						<br>
+						You already have most of the information you need, but here are some details that might come in handy:<br>
+						<ul>
+							<li>the width of the truck is 250px</li>
+							<li>the distance that the truck is from the bottom of the screen is constant</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">end_game()</span>
+					</td>
+					<td>
+						This function is called by the game whenever the timer ends. It should open a popup congratulating the user on how many kiwi they caught (it should say the number) and then reset <span class = "code">kiwi_caught</span> to zero and update the HTML element. It should be clear that pressing the button starts a new game. 
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<div class = "heading">
+				Reference:
+			</div>
+			<table id = "reference">
+				<tr>
+					<td>
+						<span class = "code">kiwi_rate</span>
+					</td>
+					<td>
+						Variable representing the user's setting for the rate that kiwi should fall. This is a number from 0-100 that should be treated as the percent chance that a kiwi will fall at any given frame.  
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code"><span class = "code-keyword">Math</span>.<span class = "code-keyword">random()</span></span>
+					</td>
+					<td>
+						Returns a random value between 0 and 1.  
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">is_down(<span class = "code-param">aStr</span>)</span>
+					</td>
+					<td>
+						Returns true if the corresponding key is pressed down, false otherwise. Accepts "b", "left" and "right" as parameters. 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">create_kiwi()</span>
+					</td>
+					<td>
+						Creates a falling kiwi!
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">set_truck_velocity(<span class = "code-param">aNum</span>)</span>
+					</td>
+					<td>
+						Sets the velocity of the truck.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">get_truck_velocity()</span>
+					</td>
+					<td>
+						Returns an integer respresenting the current velocity of the truck.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">set_truck_left(<span class = "code-param">aNum</span>)</span>
+					</td>
+					<td>
+						Sets the distance of the truck from the left side of the screen.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">get_truck_left()</span>
+					</td>
+					<td>
+						Returns an integer respresenting the distance of the truck from the left side of the screen.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">get_kiwi_x(<span class = "code-param">kiwi</span>)</span>
+					</td>
+					<td>
+						Returns an integer representing the distance a given kiwi is from the left side of the screen.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">get_kiwi_y(<span class = "code-param">kiwi</span>)</span>
+					</td>
+					<td>
+						Returns an integer representing the distance a given kiwi is from the top of the screen.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code">delete_kiwi(<span class = "code-param">kiwi</span>)</span>
+					</td>
+					<td>
+						Removes a given kiwi from the screen. 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code"><span class = "code-keyword">alert</span>(<span class = "code-param">title</span>, <span class = "code-param">text</span>, <span class = "code-param">button</span>)</span>
+					</td>
+					<td>
+						Opens a popup window and places the given parameters into the corresponding positions in the window.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code-keyword">window</span>.<span class = "code-keyword">innerWidth</span>
+					</td>
+					<td>
+						Variable that represents the width of the window in pixels.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class = "code-keyword">window</span>.<span class = "code-keyword">innerHeight</span>
+					</td>
+					<td>
+						Variable that represents the height of the window in pixels.
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<div class = "heading">
+				Rubric:
+			</div>
+			<table class = "rubric">
+				<tr>
+					<td>
+						15% - <span class = "code">process_frame()</span>
+					</td>
+					<td>
+						<ul>
+							<li>2 - brake works</li>
+							<li>3 - right arrow works</li>
+							<li>3 - left arrow works</li>
+							<li>3 - coasting works</li>
+							<li>2 - <span class = "code">compute_truck_position()</span> is always called</li>
+							<li>2 - uses random to create kiwis</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						10% - <span class = "code">translate_truck_right()</span>
+					</td>
+					<td>
+						<ul>
+							<li>5 - Truck velocity increases</li>
+							<li>5 - Truck has maximum speed</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						10% - <span class = "code">translate_truck_left()</span>
+					</td>
+					<td>
+						<ul>
+							<li>5 - Truck velocity decreases</li>
+							<li>5 - Truck has maximum speed</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						10% - <span class = "code">coast_truck()</span>
+					</td>
+					<td>
+						<ul>
+							<li>10 - Truck velocity approaches zero</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						10% - <span class = "code">brake_truck()</span>
+					</td>
+					<td>
+						<ul>
+							<li>10 - Truck velocity approaches zero quickly</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						15% - <span class = "code">compute_truck_position()</span>
+					</td>
+					<td>
+						<ul>
+							<li>10 - Truck moves</li>
+							<li>5 - Truck does not pass the edge of the screen</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						15% - <span class = "code">find_collisions(kiwi)</span>
+					</td>
+					<td>
+						<ul>
+							<li>5 - Comment explains the method for looking for collisions</li>
+							<li>5 - Collisions occur as expected</li>
+							<li>5 - Collision method makes sense</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						15% - <span class = "code">end_game()</span>
+					</td>
+					<td>
+						<ul>
+							<li>3 - opens popup</li>
+							<li>4 - popup contains title, message and button text</li>
+							<li>4 - message contains <span class = "code">kiwi_caught</span></li>
+							<li>4 - <span class = "code">kiwi-count</span> element and <span class = "code">kiwi_caught</span> are reset</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<div class = "heading">
+				Extra Credit:
+			</div>
+			<table class = "extra-credit">
+				<tr>
+					<td>
+						This music really sucks. Replace the music.mp3 file with any other song for 5 points of extra credit. Not hearing anything? Make sure you turn up the volume in the options panel. 
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<div class = "heading">
+				Files to Upload to "lab4":
+			</div>
+			<table class = "deliverables">
+				<tr>
+					<td>
+						<ul>
+							<li><span class = "code">student_code.js</span></li>
+							<li><span class = "code">music.mp3</span> (even if it's just the original) </li>
+							<li><span class = "code">index.html</span> (do not edit)</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<br>
+			created by <a href = "https://joshua.diaddigo.com/">Joshua Diaddigo</a>
+		</div>
+		<div id = "popup_bg" style = "display: none;">
+			<div id = "popup_window">
+				<div id = "popup_title"></div>
+				<div id = "popup_body"></div>
+				<div id = "popup_button">ok</div>
+			</div>
+		</div>
+	</body>
+	<style>
+		body {
+			background: #333;
+			font-family: sans-serif;
+			font-weight: 100;
+			margin: 0;
+			color: #fff;
+		}
+
+		table, td, tr {
+			padding: 15px;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		    border-collapse: collapse;
+		}
+
+		tr  {
+		    background: #222;
+		}
+
+		tr:nth-child(even) {
+		    background: #111 !important;
+		}
+
+		a {
+			color: #fff;
+		}
+
+		.code td {
+			width: 50%;
+			font-family: monospace;
+		}
+
+		.code {	
+			font-family: monospace;
+		}
+
+		.code-keyword {
+			color: #0af;
+		}
+
+		.code-statement {
+			color: #f00;
+		}
+
+		.code-comment, .code-string {
+			color: #888;
+		}
+
+		.code-param {
+			color: #f80;
+		}
+
+		.tab {
+			width: 30px;
+			display: inline-block;
+		}
+
+		#reference, 
+		.code, 
+		.rubric, 
+		.extra-credit,
+		.deliverables {
+			width: 100%;
+		}
+
+		.lab {
+			text-align: right;
+			font-size: 30px;
+			font-weight: 100;
+		}
+
+		.heading {
+			padding: 10px;
+			font-size: 18px;
+			background: #bbb;
+			color: #000;
+			text-align: center;
+		}
+
+		.title {
+			font-size: 18px;
+			font-weight: 100;
+		}
+
+		.text-chunk {
+			display: inline-block;
+		}
+
+		.subscript {
+			font-size: 12px;
+		}
+
+		#content {
+			max-width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		#popup_title {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			color: #111;
+		}
+
+		#popup_body {
+			color: #bbb;
+			font-family: sans-serif;
+			font-weight: 100;
+			margin-bottom: 10px;
+			color: #111;
+		}
+
+		#popup_button {
+			font-family: sans-serif;
+			font-weight: 100;
+			float: right;
+			cursor: pointer;
+			color: #111;
+		}
+
+		#popup_bg {
+			width: 100%;
+			height: 100%;
+			background-color: #333;
+			position: absolute;
+			top: 0;
+			left: 0;
+			-webkit-transition: 1s;
+			transition: 1s;
+		}
+
+		#popup_window {
+			width: 100%;
+			padding: 25px;
+			padding-top: 10px;
+			padding-bottom: 30px;
+			max-width: 500px;
+			background-color: #ccc;
+			margin-left: auto;
+			margin-right: auto;
+			box-shadow: 0 0 30px rgba( 0, 0, 0, 0.3);
+			box-sizing: border-box;
+			transition: 1s;
+		}
+
+		#popup_password {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			font-family: monospace;
+			color: #fff;
+			font-size: 14;
+			background: #aaa;
+			border: 1px solid #333;
+			height: 20px;
+		}
+	</style>
+	<script>
+		var height;
+
+		function routines() {
+			height = $( window ).height();
+			$( "#popup_window" ).css( "margin-top", ((height / 2) - ($( "#popup_window" ).height() / 2) - 40) + "px" );
+		}
+
+		$( document ).ready( function() {
+			routines();
+
+			$( "#popup_bg" ).css( "opacity", "0" );
+			setTimeout(function() {
+				$( "#popup_bg" ).hide();
+			}, 1000);
+		});
+
+		$( window ).resize( function() {
+			routines();
+		});
+
+		function alert(title, body, button, func) {
+			$( "#popup_bg" ).show();
+			setTimeout(function() {
+				$( "#popup_bg" ).css( "opacity", "1" );
+			}, 10);
+
+			$( "#popup_title" ).html( title );
+			$( "#popup_body" ).html( body );
+			$( "#popup_button" ).html( button );
+			$( "#popup_button" ).off( "click" );
+			$( "#popup_button" ).on( "click", func );
+			routines();
+
+			$( "body" ).off( "keypress" );
+			$( "body" ).on( "keypress", function(e) {
+				if ( e.which == 13 ) {
+					func();
+				}
+			});
+		}
+	</script>
+</html>
