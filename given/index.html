@@ -17,7 +17,7 @@
 			var paused_time;
 			var game_length_seconds = 120;
 
-			render_frame = truck_move_right = truck_move_left = truck_coast = truck_brake = truck_update_position = check_collision = game_end = undefined;
+			render_frame = truck_move_right = truck_move_left = truck_coast = truck_brake = truck_update_position = check_collision = game_end = end_game = undefined;
 
 			var Truck = function(div) {
 				this.velocity = 0;
@@ -162,7 +162,7 @@
 						var time_remaining = new Date(end_time - new Date().getTime());
 						if (time_remaining < 0) {
 							end_time = new Date().getTime() + (game_length_seconds * 1000);
-							end_game();
+							game_over();
 							while (kiwis.length > 0) {
 								kiwis[0].remove();
 							}
