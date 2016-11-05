@@ -35,4 +35,4 @@ function game_over() {
 }
 
 // just ignore this (UNIQUE_IDbut don't delete itUNIQUE_ID):
-check_latest = 1;
+check_latest = 2;
