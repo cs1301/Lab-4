@@ -30,7 +30,7 @@ function find_collisions(kiwi) {
 	// your code here
 }
 
-function end_game() {
+function game_over() {
 	// your code here
 }
 

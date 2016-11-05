@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 	<head>
-		<title>Lab 4 - CS 1301</title>
+		<title>Lab 3 - CS 1301</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -8,7 +8,7 @@
 			<br>
 			<br>
 			<div class = "lab">
-				Lab 4
+				Lab 3
 				<div class = "subscript">
 					CS 1301 - Due Weekday Month 99th, 2016
 				</div>
@@ -91,17 +91,15 @@
 			<table>
 				<tr>
 					<td>
-						Now it's time to try writing some Javascript! First you will need to add a few files to your prism server. Download these and save them to a new folder on your prism drive under public_html called "lab4":<br>
+						Now it's time to try writing some Javascript! Download these files and save them to the same folder on your computer:<br>
 						<ul>
 							<li><a href = "./given/student_code.js">student_code.js</a></li>
 							<li><a href = "./given/music.mp3">music.mp3</a></li>
-							<li><a href = "./given/index.html">index.html</a> (do not edit)</li>
+							<li><a href = "./given/index.php">index.html</a> (do not edit)</li>
 						</ul>
-						As always, it's important that you save these to the right place so that we can grade your lab. Now when you go to the folder in your browser, you should see a half finished game. Go ahead and try it out:<br>
+						Now when you open index.html in your browser, you should see a half finished game. Go ahead and try it out:<br>
 						<br>
-						http://www.prism.gatech.edu/~yourusername/lab4/<br>
-						<br>
-						Your job is to finish the game! We've provided some empty functions for you to fill in as well as some more functions for you to use as you need them. When you finish, the video game should be playable, like in the following example video: 
+						Your job is to finish the game! We've provided some empty functions for you to fill in as well as some more functions for you to use as you need them. All edits you make should take place in student_code.js. When you finish, the video game should be playable, like in the following video: 
 						<br>
 						<br>
 						<iframe style = "display: block; margin-left: auto; margin-right: auto; width: 100%; height: 550px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); border-radius: 5px;" src="https://www.youtube-nocookie.com/embed/vY0ifwfLBt4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
@@ -198,7 +196,7 @@
 				</tr>
 				<tr>
 					<td>
-						<span class = "code">end_game()</span>
+						<span class = "code">game_over()</span>
 					</td>
 					<td>
 						This function is called by the game whenever the timer ends. It should open a popup congratulating the user on how many kiwi they caught (it should say the number) and then reset <span class = "code">kiwi_caught</span> to zero and update the HTML element. It should be clear that pressing the button starts a new game. 
@@ -412,7 +410,7 @@
 				</tr>
 				<tr>
 					<td>
-						15% - <span class = "code">end_game()</span>
+						15% - <span class = "code">game_over()</span>
 					</td>
 					<td>
 						<ul>
@@ -439,7 +437,7 @@
 			<br>
 			<br>
 			<div class = "heading">
-				Files to Upload to "lab4":
+				Files to submit:
 			</div>
 			<table class = "deliverables">
 				<tr>
