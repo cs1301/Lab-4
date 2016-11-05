@@ -1,5 +1,4 @@
 <?php
-
 header('Content-Type: application/html');
 header("Content-disposition: attachment; filename=\"index.html\"");
 
