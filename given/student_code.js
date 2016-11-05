@@ -30,9 +30,9 @@ function find_collisions(kiwi) {
 	// your code here
 }
 
-function end_game() {
+function game_over() {
 	// your code here
 }
 
-// just ignore this (but don't delete it):
+// just ignore this (UNIQUE_IDbut don't delete itUNIQUE_ID):
 check_latest = true;
